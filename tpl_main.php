@@ -48,7 +48,7 @@ Template Name: Главная
 					<?php endwhile; endif; wp_reset_postdata(); ?>
 				</div>
 				<div>
-					<div class="b_pagination">
+					<div class="b_pagination mx-auto text-center pb-5">
 						<?php 
 							$big = 999999999; // уникальное число
 							echo paginate_links( array(

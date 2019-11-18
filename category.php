@@ -53,20 +53,20 @@
 					<?php endwhile; endif; wp_reset_postdata(); ?>
 				</div>
 				<div>
-						<div class="b_pagination mx-auto text-center">
-							<?php 
-								$big = 999999999; // уникальное число
-								echo paginate_links( array(
-								'format'  => 'page/%#%',
-								'current'   => $current,
-								'total'   => $custom_query->max_num_pages,
-								'prev_next' => true,
-								'next_text' => (''),
-								'prev_text' => ('')
-								)); 
-							?>
-						</div>
+					<div class="b_pagination mx-auto text-center pb-3">
+						<?php 
+							$big = 999999999; // уникальное число
+							echo paginate_links( array(
+							'format'  => 'page/%#%',
+							'current'   => $current,
+							'total'   => $custom_query->max_num_pages,
+							'prev_next' => true,
+							'next_text' => (''),
+							'prev_text' => ('')
+							)); 
+						?>
 					</div>
+				</div>
 			</div>
 			<div class="bg-white shadow-lg rounded text-center mb-3 py-3 px-3">
 				Оцените, пожалуйста, данную рубрику:
