@@ -77,7 +77,9 @@
 				Баннер
 			</div>
 			<div class="bg-white shadow-lg rounded mb-3 py-3 px-3">
-				ВК-комменты
+				<?php if (carbon_get_theme_option( 'crb_comments_inner' )): ?>
+			    <?php echo carbon_get_theme_option( 'crb_comments_inner' ); ?>
+			  <?php endif; ?>
 			</div>
 		</div>
 	</div>

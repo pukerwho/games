@@ -45,7 +45,7 @@
       <div class="mobile_cover block md:hidden bg-indigo-800">
         <?php get_template_part('blocks/mobile-cover'); ?>
       </div>
-      <div class="header_bottom mb-3">
+      <div class="header_bottom hidden md:block mb-3">
         <div class="container mx-auto">
           <?php wp_nav_menu([
             'theme_location' => 'head_menu',
@@ -54,7 +54,7 @@
           ]); ?>
         </div>
       </div>
-      <div class="header_tags mb-5 px-3 md:px-0">
+      <div class="header_tags mb-5 px-3 md:px-0 mt-5 md:mt-0">
         <div class="container mx-auto flex justify-between bg-white shadow-lg rounded-lg overflow-hidden pt-3 px-3">
           <div class="text-sm">
             <div class="float-left mr-2">
