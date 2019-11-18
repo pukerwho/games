@@ -103,24 +103,24 @@ add_action('wp_ajax_nopriv_loadmore', 'loadmore_ajax_handler');
 
 add_action('init', 'rating_default');
 
-function rating_default() {
-    global $wpdb;
-    $wpdb->update(
-        'wp_termmeta', 
-        array(
-            'meta_value' => 5,
-        ),
-        array(
-            'meta_key' => '_crb_cats_rating',
-        ),
-    );
-    $wpdb->update(
-        'wp_termmeta', 
-        array(
-            'meta_value' => 1,
-        ),
-        array(
-            'meta_key' => '_crb_cats_rating_count',
-        ),
-    );
-}
+// function rating_default() {
+//     global $wpdb;
+//     $wpdb->update(
+//         'wp_termmeta', 
+//         array(
+//             'meta_value' => 5,
+//         ),
+//         array(
+//             'meta_key' => '_crb_cats_rating',
+//         ),
+//     );
+//     $wpdb->update(
+//         'wp_termmeta', 
+//         array(
+//             'meta_value' => 1,
+//         ),
+//         array(
+//             'meta_key' => '_crb_cats_rating_count',
+//         ),
+//     );
+// }
