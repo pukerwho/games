@@ -47,4 +47,16 @@ $('.stars i').on('mouseleave', function(){
 
 $('.stars i').on('click', function(){
   $('.stars i').css({'color':'#f56565 !important'});
-})
+});
+
+//Не работает игра
+$('.notworking_button').on('click', function(){
+  $('.modal').addClass('active');
+  $('.modal-bg').addClass('active');
+});
+
+//Закрыть модель
+$('.modal-close').on('click', function(){
+  $('.modal').removeClass('active');
+  $('.modal-bg').removeClass('active');
+});

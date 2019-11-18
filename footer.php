@@ -5,7 +5,7 @@
     <footer id="footer" class="footer">
     	<div class="container mx-auto mb-3 px-3 md:px-0">
     		<div class="breadcrumbs">
-    			<?php if( !is_page_template( 'tpl_main.php' )): ?>
+    			<?php if( is_single() ): ?>
     				<?php 
 							$current_term = wp_get_post_terms(  get_the_ID() , 'category', array( 'parent' => 0 ) );
 							foreach ($current_term as $myterm); {
@@ -25,6 +25,14 @@
     					<?php the_title(); ?> 
     				</span>
     			<?php endif; ?>
+                <?php if( is_category() ): ?>
+                    <span typeof="v:Breadcrumb"> 
+                        <a href="<?php echo home_url() ?>" rel="v:url" property="v:title" class="underline font-semibold text-gray-800 hover:text-gray-900">Главная</a> › 
+                    </span> 
+                    <span typeof="v:Breadcrumb" class="text-gray-800">
+                        <?php single_term_title(); ?>
+                    </span>
+                <?php endif; ?>
     		</div>
     	</div>
     	<div class="bg-indigo-800 text-white py-2">
@@ -45,6 +53,17 @@
     		</div>
     	</div>
     </footer>
+    <?php if( is_single() ): ?>
+        <div class="notworking modal rounded shadow-lg p-3">
+            <div class="modal-close">X</div>
+            <img src="<?php bloginfo('template_url') ?>/img/warning.svg" alt="" width="20px" class="float-left mr-1">
+            <p class="text-sm mb-3">Игра не работает? Попробуйте перезагрузить страницу и немного подождать. Если игра все равно не запускается, нажмите на кнопку "Игра не работает". Спасибо.</p>
+            <div>
+                <?php echo do_shortcode('[contact-form-7 id="5" title="Игра не работает"]') ?>
+            </div>
+        </div>
+    <?php endif; ?>
+    <div class="modal-bg"></div>
     <?php wp_footer(); ?>
   </div>
 </body>

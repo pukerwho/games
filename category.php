@@ -12,6 +12,9 @@
 			</div>
 			<div class="bg-white shadow-lg rounded">
 				<div class="content py-3 px-3">
+					<h1>
+						<?php single_term_title(); ?>
+					</h1>
 					<?php if (carbon_get_term_meta(get_queried_object_id(), 'crb_cats_content')): ?>
 						<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_cats_content' ) ); ?>
 					<?php endif; ?>
