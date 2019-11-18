@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container mx-auto">
+<div class="container mx-auto px-3 md:px-0">
 	<?php get_template_part('blocks/under-header') ?>
 	<div class="flex">
 		<div class="hidden md:block md:w-1/3">

@@ -1,4 +1,4 @@
-<div class="under_header flex flex-col md:flex-row">
+<div class="under_header flex flex-col md:flex-row mb-3">
 	<!-- Две категории -->
 	<?php 
 		$all_terms = get_terms([

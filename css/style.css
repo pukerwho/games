@@ -42261,8 +42261,49 @@ h3 {
   font-size: 1.1rem;
   font-weight: 600; }
 
+[type="submit"] {
+  color: #fff;
+  background-color: #48bb78;
+  -webkit-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem; }
+
 .bg {
   background-color: rgba(254, 149, 0, 0.08); }
+
+.page-numbers {
+  border: 1px solid #d53f8c;
+  -webkit-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  margin: 0 0.2rem;
+  padding: 0.5rem 0.75rem; }
+  .page-numbers.current {
+    color: #ffffff;
+    background-color: #d53f8c; }
+  .page-numbers.next {
+    width: 9px;
+    height: 14px;
+    background: url("../img/right-arrow.svg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: none; }
+    .page-numbers.next:hover {
+      background-color: transparent; }
+  .page-numbers.prev {
+    width: 9px;
+    height: 14px;
+    background: url("../img/left-arrow.svg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: none; }
+    .page-numbers.prev:hover {
+      background-color: transparent; }
+  .page-numbers:hover {
+    color: #ffffff;
+    background-color: #d53f8c; }
 
 .modal-bg.active {
   width: 100%;
