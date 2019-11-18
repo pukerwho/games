@@ -10,7 +10,7 @@
 		foreach ($all_terms as $term):
 	?>
 		<?php if(get_term_children($term->term_id, 'category')): ?>
-			<div class="w-1/3">
+			<div class="w-2/5">
 				<div class="term_list mb-3">
 					<div class="term_list_title text-xl mb-1">
 						<?php echo $term->name ?>			
@@ -35,7 +35,7 @@
 			</div>
 		<?php endif; ?>
 	<?php endforeach; ?>
-	<div class="w-1/3">
+	<div class="w-1/5">
 		<?php echo carbon_get_theme_option( 'crb_ad_top_banner' ); ?>
 	</div>
 </div>
