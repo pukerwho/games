@@ -12,10 +12,15 @@
 		<?php if(get_term_children($term->term_id, 'category')): ?>
 			<div class="w-full md:w-2/5">
 				<div class="term_list mb-3">
-					<div class="term_list_title text-xl mb-1">
-						<?php echo $term->name ?>			
+					<div class="flex justify-between items-center md:justify-start">
+						<div class="term_list_title text-xl mb-1">
+							<?php echo $term->name ?>			
+						</div>
+						<div class="term_list_more block md:hidden" data-more="more<?php echo $term->term_id ?>">
+							<img src="<?php bloginfo('template_url') ?>/img/caret-arrow-up.svg" alt="" width="20px">
+						</div>	
 					</div>
-					<div class="flex flex-wrap">
+					<div class="term_list_items flex flex-wrap more<?php echo $term->term_id ?>">
 						<?php 
 							$child_terms = get_term_children($term->term_id, 'category');
 							foreach ($child_terms as $child_term):

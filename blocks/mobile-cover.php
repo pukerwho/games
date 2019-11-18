@@ -10,7 +10,7 @@
 				<div class="term_list_title text-xl text-white mb-1">
 					<?php echo $term->name ?>			
 				</div>
-				<div class="flex flex-wrap">
+				<div class="term_list_items flex flex-wrap">
 					<?php 
 						$child_terms = get_term_children($term->term_id, 'category');
 						foreach ($child_terms as $child_term):

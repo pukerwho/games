@@ -42414,6 +42414,24 @@ h3 {
   transition: all 0.5s;
   margin-top: -2px; }
 
+.term_list_items {
+  height: 66px;
+  overflow: hidden; }
+  .term_list_items.active {
+    height: 100%; }
+.term_list_more {
+  cursor: pointer; }
+  .term_list_more img {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+  .term_list_more.active img {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
 .term_list_item {
   background-color: #d53f8c;
   -webkit-border-radius: 0.25rem;

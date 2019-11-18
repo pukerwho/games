@@ -32,6 +32,13 @@ $('.header_tags_more_btn').on('click', function(){
   $('.header_tags .container').toggleClass('open');
 });
 
+//Mobile Under Header
+$('.term_list_more').on('click', function(){
+  var dataTermListMore = $(this).data('more');
+  $(this).toggleClass('active');
+  $('.'+dataTermListMore).toggleClass('active');
+})
+
 //Stars rating
 var getRating = $('.get_rating').val();
 var ratingPercentage = getRating*20;
