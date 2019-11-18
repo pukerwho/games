@@ -15,8 +15,9 @@ function crb_attach_theme_options() {
         Field::make( 'textarea', 'crb_ad_top_horizont_banner', 'Верхний горизонтальный баннер' ),
         Field::make( 'textarea', 'crb_ad_top_banner', 'Верхний квадратный баннер' ),
     ) )
-    ->add_tab( __('Блок О НАС'), array(
-        Field::make( 'rich_text', 'crb_aboutus_text', 'Текст О НАС' ),
+    ->add_tab( 'Комментарии VK', array(
+        Field::make( 'textarea', 'crb_comments_head', 'Код в head' ),
+        Field::make( 'textarea', 'crb_comments_inner', 'Код для отображения' ),
     ) )
     ->add_tab( __('Контакты'), array(
         Field::make( 'complex', 'crb_contacts', __( 'Контактная информация' ) )

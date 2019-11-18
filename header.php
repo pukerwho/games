@@ -17,6 +17,9 @@
 
     wp_head();
 	?>
+  <?php if (carbon_get_theme_option( 'crb_comments_head' )): ?>
+    <?php echo carbon_get_theme_option( 'crb_comments_head' ); ?>
+  <?php endif; ?>
 </head>
 <body <?php echo body_class(); ?> style="background: url('<?php echo carbon_get_theme_option( 'crb_site_bg' ); ?>') fixed;">
   <!-- <div class="preloader"></div> -->

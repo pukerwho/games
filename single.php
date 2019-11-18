@@ -94,6 +94,11 @@
 						Игра не работает?
 					</div>
 				</div>
+				<div>
+					<?php if (carbon_get_theme_option( 'crb_comments_inner' )): ?>
+				    <?php echo carbon_get_theme_option( 'crb_comments_inner' ); ?>
+				  <?php endif; ?>
+				</div>
 			</div>
 			<?php endwhile; else: ?>
 				<p><?php _e('Ничего не найдено'); ?></p>
