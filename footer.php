@@ -31,7 +31,7 @@
     		<div class="container mx-auto px-3 md:px-0">
     			<div class="flex justify-center items-center md:justify-between flex-col-reverse md:flex-row">
     				<div class="copyright">
-    					Копирайт
+    					<?php echo carbon_get_theme_option( 'crb_copyright' ); ?>
     				</div>
     				<div class="mb-3 md:mb-0">
     					<?php wp_nav_menu([

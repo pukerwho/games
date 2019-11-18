@@ -3,8 +3,10 @@
 	<?php 
 		$all_terms = get_terms([
 			'taxonomy' => 'category',
+			'parent' => 0,
 			'number' => 2
 		]);
+
 		foreach ($all_terms as $term):
 	?>
 		<?php if(get_term_children($term->term_id, 'category')): ?>

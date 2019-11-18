@@ -64,7 +64,7 @@
             </svg>
               Чаще всего ищут:
             </div>
-            <div class="mr-2">
+            <div class="flex flex-wrap mr-2">
               <?php 
                 $tags = get_tags(array(
                   'orderby' => 'count',

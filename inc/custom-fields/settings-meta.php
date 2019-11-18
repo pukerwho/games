@@ -9,6 +9,7 @@ function crb_attach_theme_options() {
     ->add_tab( 'Общие', array(
         Field::make( 'image', 'crb_header_logo', 'Логотип' )->set_value_type( 'url'),
         Field::make( 'image', 'crb_site_bg', 'Фон' )->set_value_type( 'url'),
+        Field::make( 'textarea', 'crb_copyright', 'Копирайт' ),
     ) )
     ->add_tab( 'Реклама', array(
         Field::make( 'textarea', 'crb_ad_top_horizont_banner', 'Верхний горизонтальный баннер' ),
