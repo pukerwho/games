@@ -18,7 +18,7 @@
     wp_head();
 	?>
 </head>
-<body <?php echo body_class(); ?> style="background: url('<?php bloginfo('template_url') ?>/img/games-pattern.png') fixed;">
+<body <?php echo body_class(); ?> style="background: url('<?php echo carbon_get_theme_option( 'crb_site_bg' ); ?>') fixed;">
   <!-- <div class="preloader"></div> -->
   <div class="bg">
     <header id="header" class="header" role="banner">
@@ -26,7 +26,7 @@
         <div class="container flex justify-between items-center mx-auto px-3 md:px-0">
           <a href="<?php echo home_url() ?>">
             <div class="logo">
-              <img src="https://static.igroutka.net/logo-new.png" alt="">
+              <img src="<?php echo carbon_get_theme_option( 'crb_header_logo' ); ?>" alt="">
             </div>
           </a>
           <div class="search hidden md:block">

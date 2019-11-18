@@ -3,12 +3,12 @@
 <div class="container mx-auto">
 	<?php get_template_part('blocks/under-header') ?>
 	<div class="flex">
-		<div class="w-1/3">
+		<div class="hidden md:block md:w-1/3">
 			<?php get_template_part('blocks/sidebar') ?>	
 		</div>
-		<div class="w-2/3">
+		<div class="w-full md:w-2/3">
 			<div class="mb-3">
-				Баннер
+				<?php echo carbon_get_theme_option( 'crb_ad_top_horizont_banner' ); ?>
 			</div>
 			<div class="bg-white shadow-lg rounded">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

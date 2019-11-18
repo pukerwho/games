@@ -8,7 +8,7 @@
 		</div>
 		<div class="w-full md:w-2/3 py-3 px-3 md:py-0 md:px-0">
 			<div class="mb-3">
-				Баннер
+				<?php echo carbon_get_theme_option( 'crb_ad_top_horizont_banner' ); ?>
 			</div>
 			<div class="bg-white shadow-lg rounded">
 				<div class="content py-3 px-3">

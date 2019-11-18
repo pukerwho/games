@@ -34,6 +34,6 @@
 		<?php endif; ?>
 	<?php endforeach; ?>
 	<div class="w-1/3">
-		Text
+		<?php echo carbon_get_theme_option( 'crb_ad_top_banner' ); ?>
 	</div>
 </div>

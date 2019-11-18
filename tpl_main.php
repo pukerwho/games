@@ -14,7 +14,7 @@ Template Name: Главная
 		</div>
 		<div class="w-full md:w-2/3">
 			<div class="mb-3">
-				Баннер
+				<?php echo carbon_get_theme_option( 'crb_ad_top_horizont_banner' ); ?>
 			</div>
 			<div class="bg-white shadow-lg rounded">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
