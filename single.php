@@ -93,8 +93,7 @@
 					<?php endif; ?>
 				</div>
 				<?php if (function_exists('DISPLAY_ULTIMATE_PLUS')): ?>
-					<div class="text-center mb-3">
-						ddd
+					<div class="relative mb-3">
 						<?php echo DISPLAY_ULTIMATE_PLUS(); ?> 
 					</div>
 				<?php endif; ?>
