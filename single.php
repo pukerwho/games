@@ -26,7 +26,7 @@
 					</div>
 					<div>
 						<?php 
-							$current_term = wp_get_post_terms(  get_the_ID() , 'category', array( 'parent' => 0 ) );
+							$current_term = wp_get_post_terms(  get_the_ID() , 'category', array() );
 							foreach ($current_term as $myterm); {
 								$current_term_slug = $myterm->slug;
 								$current_term_name = $myterm->name;
