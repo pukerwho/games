@@ -38,12 +38,12 @@
 						<?php 
 							$big = 999999999; // уникальное число
 							echo paginate_links( array(
-							'format'  => 'page/%#%',
-							'current'   => $paged,
-							'total'   => $custom_query->max_num_pages,
-							'prev_next' => true,
-							'next_text' => (''),
-							'prev_text' => ('')
+								'format'  => 'page/%#%',
+								'current'   => $paged,
+								'total'   => $custom_query->max_num_pages,
+								'prev_next' => true,
+								'next_text' => (''),
+								'prev_text' => ('')
 							)); 
 						?>
 					</div>

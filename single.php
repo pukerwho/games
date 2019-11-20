@@ -53,7 +53,7 @@
 			</div>	
 			<div class="bg-white shadow-lg rounded text-center mb-3 py-3 px-3">
 				Оцените, пожалуйста, данную игру:
-				<div class="stars">
+				<div class="stars stars-post">
 					<div class="absolute">
 						<i class="fa fa-star" aria-hidden="true" data-value="1"></i>
 						<i class="fa fa-star" aria-hidden="true" data-value="2"></i>
@@ -77,6 +77,8 @@
 				<div class="text-sm text-gray-800 mb-3">
 					<span class="mr-2">Рейтинг: <?php echo number_format($rating, 1); ?>;</span>
 					<span>Голосов: <?php echo $rating_count; ?>;</span>
+					<br>
+					<span class="rating-text">Ваша оценка принята!</span>
 				</div>
 				<div class="relative mb-3">
 					<?php echo do_shortcode('[Sassy_Social_Share]') ?> 
@@ -104,7 +106,6 @@
 				<div class="mb-3">
 					<?php echo carbon_get_theme_option( 'crb_ad_bottom_horizont_banner' ); ?>	
 				</div>
-				
 				<div>
 					<?php if (carbon_get_theme_option( 'crb_comments_inner' )): ?>
 				    <?php echo carbon_get_theme_option( 'crb_comments_inner' ); ?>
@@ -117,5 +118,8 @@
 		</div>
 	</div>
 </div>
+<input type="hidden" value="<?php echo get_the_ID(); ?>" class="post_id">
+<input type="hidden" value="<?php echo carbon_get_post_meta(get_the_ID(), 'crb_post_rating'); ?>" class="post_rating_old">
+<input type="hidden" value="<?php echo carbon_get_post_meta(get_the_ID(), 'crb_post_rating_count'); ?>" class="post_rating_count">
 
 <?php get_footer(); ?>

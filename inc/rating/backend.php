@@ -9,9 +9,62 @@ function myRating() {
 	  'categoryRatingCount' => $custom_query->categoryRatingCount,
 	  'categoryRatingOld' => $custom_query->categoryRatingOld,
 	  'categoryRatingNew' => $custom_query->categoryRatingNew,
+
+	  'postId' => $custom_query->postId,
+	  'postRatingCount' => $custom_query->postRatingCount,
+	  'postRatingOld' => $custom_query->postRatingOld,
+	  'postRatingNew' => $custom_query->postRatingNew,
 	  ) );
 	wp_enqueue_script( 'rating' );
 }
+
+function rating_post(){
+	global $wpdb;
+  
+  $post_id = stripslashes_deep($_POST['postId']);
+  $post_rating_new = stripslashes_deep($_POST['postRatingNew']);
+  $post_rating_old = stripslashes_deep($_POST['postRatingOld']);
+  $post_rating_count = stripslashes_deep($_POST['postRatingCount']);
+
+  $post_rating_count = $post_rating_count + 1;
+  $post_rating_old = $post_rating_old + $post_rating_new;
+
+  $wpdb->update(
+		'wp_postmeta', 
+		array(
+			'meta_value' => $post_rating_old,
+		),
+		array(
+			'post_id' => $post_id,
+			'meta_key' => '_crb_post_rating',
+		),
+		array( '%s' ),
+		array( // формат для &laquo;где&raquo;
+			'%d',
+			'%s'
+		)
+	);
+
+	$wpdb->update(
+		'wp_postmeta', 
+		array(
+			'meta_value' => $post_rating_count,
+		),
+		array(
+			'post_id' => $post_id,
+			'meta_key' => '_crb_post_rating_count',
+		),
+		array( '%s' ),
+		array( // формат для &laquo;где&raquo;
+			'%d',
+			'%s'
+		)
+	);
+}
+
+add_action('wp_ajax_rating_post_back', 'rating_post');
+add_action('wp_ajax_nopriv_rating_post_back', 'rating_post');
+
 
 function rating_category(){
 	global $wpdb;

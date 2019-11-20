@@ -70,7 +70,7 @@
 			</div>
 			<div class="bg-white shadow-lg rounded text-center mb-3 py-3 px-3">
 				Оцените, пожалуйста, данную рубрику:
-				<div class="stars">
+				<div class="stars stars-cat">
 					<div class="absolute">
 						<i class="fa fa-star" aria-hidden="true" data-value="1"></i>
 						<i class="fa fa-star" aria-hidden="true" data-value="2"></i>
@@ -99,7 +99,7 @@
 				</div>
 			</div>
 			<div class="bg-white shadow-lg rounded mb-3 py-3 px-3">
-				Баннер
+				<?php echo carbon_get_theme_option( 'crb_ad_bottom_horizont_banner' ); ?>
 			</div>
 			<div class="bg-white shadow-lg rounded mb-3 py-3 px-3">
 				<?php if (carbon_get_theme_option( 'crb_comments_inner' )): ?>
