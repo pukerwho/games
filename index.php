@@ -10,7 +10,7 @@
 			<div class="mb-3">
 				<?php echo carbon_get_theme_option( 'crb_ad_top_horizont_banner' ); ?>
 			</div>
-			<div class="bg-white shadow-lg rounded">
+			<div class="bg-white shadow-lg rounded mb-3">
 				<div class="content py-3 px-3">
 					<?php echo apply_filters( 'the_content', carbon_get_theme_option( 'crb_main_content' ) ); ?>
 				</div>
@@ -48,6 +48,9 @@
 						?>
 					</div>
 				</div>
+			</div>
+			<div class="bg-white shadow-lg rounded mb-3 py-3 px-3">
+				<?php echo carbon_get_theme_option( 'crb_ad_bottom_horizont_banner' ); ?>	
 			</div>
 		</div>	
 	</div>

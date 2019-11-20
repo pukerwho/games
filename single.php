@@ -103,6 +103,10 @@
 						Игра не работает?
 					</div>
 				</div>
+				<div class="mb-3">
+					<?php echo carbon_get_theme_option( 'crb_ad_bottom_horizont_banner' ); ?>	
+				</div>
+				
 				<div>
 					<?php if (carbon_get_theme_option( 'crb_comments_inner' )): ?>
 				    <?php echo carbon_get_theme_option( 'crb_comments_inner' ); ?>

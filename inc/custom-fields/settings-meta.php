@@ -15,6 +15,7 @@ function crb_attach_theme_options() {
     ->add_tab( 'Реклама', array(
         Field::make( 'textarea', 'crb_ad_top_horizont_banner', 'Верхний горизонтальный баннер' ),
         Field::make( 'textarea', 'crb_ad_top_banner', 'Верхний квадратный баннер' ),
+        Field::make( 'textarea', 'crb_ad_bottom_horizont_banner', 'Баннер в подвале' ),
     ) )
     ->add_tab( 'Комментарии VK', array(
         Field::make( 'textarea', 'crb_comments_head', 'Код в head' ),
