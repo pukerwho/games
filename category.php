@@ -27,7 +27,7 @@
 						$wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
 						$custom_query = new WP_Query( array( 
 							'post_type' => 'post', 
-							'posts_per_page' => 2,
+							'posts_per_page' => 15,
 							'paged' => $current,
 							'orderby' => 'date',
 							'order' => 'DESC',

@@ -30,7 +30,7 @@ require_once get_template_directory() . '/inc/custom-fields/post-meta.php';
 require_once get_template_directory() . '/inc/custom-fields/pages-meta.php';
 require_once get_template_directory() . '/inc/custom-fields/term-meta.php';
 require_once get_template_directory() . '/inc/TGM/example.php';
-// require_once get_template_directory() . '/inc/rating/backend.php';
+require_once get_template_directory() . '/inc/rating/backend.php';
 
 register_nav_menus( array(
     'head_menu' => 'Меню в шапке',
