@@ -2,6 +2,7 @@
 	<?php 
 		$all_terms = get_terms([
 			'taxonomy' => 'category',
+			'hide_empty' => false
 		]);
 		foreach ($all_terms as $term):
 	?>
