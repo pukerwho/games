@@ -19,7 +19,7 @@
 						<?php echo apply_filters( 'the_content', carbon_get_term_meta(get_queried_object_id(), 'crb_cats_content' ) ); ?>
 					<?php endif; ?>
 				</div>
-				<div class="all_games flex mb-3 pl-3 pr-0">
+				<div class="all_games flex flex-wrap mb-3 pl-3 pr-0">
 					<?php $current_term = get_queried_object_id(); ?>
 					<?php 
 						global $wp_query, $wp_rewrite;  

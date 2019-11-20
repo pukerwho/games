@@ -23,7 +23,7 @@
 	          	endif; 
 	          ?>
 					</div>
-					<div class="all_games flex mb-3 pl-3 pr-0">
+					<div class="all_games flex flex-wrap mb-3 pl-3 pr-0">
 					<?php	while ( have_posts() ) : the_post(); ?>
 						<div class="w-1/3 md:w-1/5 px-1 md:px-1">
 							<div class="game_item h-32 relative rounded-lg mb-3" style="background: url(<?php echo get_the_post_thumbnail_url(); ?>); background-size: cover;">
