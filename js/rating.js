@@ -7,8 +7,8 @@ jQuery(function($){
       //Color Stars after click
       $('.stars-inner').css({'width':'0'})
       $(this).css({'color':'#f56565 !important'});
-      $(this).prevAll('.stars i').css({'color':'#f56565 !important'});
-      $(this).nextAll('.stars i').css({'color':'transparent !important'});
+      $(this).prevAll('.stars-post i').css({'color':'#f56565 !important'});
+      $(this).nextAll('.stars-post i').css({'color':'transparent !important'});
       
       $('.rating-text').addClass('active');
 
