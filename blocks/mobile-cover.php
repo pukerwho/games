@@ -18,7 +18,7 @@
 					  <?php $child = get_term_by('id', $child_term, 'category'); ?>
 					  <a href="<?php echo get_term_link($child->term_id, 'category') ?>">
 							<div class="term_list_item relative mr-1 mb-1">
-								<img src="<?php echo carbon_get_term_meta($child->term_id, 'crb_cats_img'); ?>" alt="<?php echo $child->name ?>" title="<?php echo $child->name ?>" loading="lazy">
+								<img src="<?php echo carbon_get_term_meta($child->term_id, 'crb_cats_img'); ?>" alt="<?php echo $child->name ?>" title="<?php echo $child->name ?>" class="lazyload">
 								<span>
 									<?php echo $child->name ?>		
 								</span>
