@@ -92,8 +92,10 @@
 	        </div>	
 				</div>
 				<div class="text-sm text-gray-800">
-					<span class="mr-2">Рейтинг: <?php echo $rating; ?>;</span>
+					<span class="mr-2">Рейтинг: <?php echo number_format($rating, 1); ?>;</span>
 					<span>Голосов: <?php echo $rating_count; ?>;</span>
+					<br>
+					<span class="rating-text">Ваша оценка принята!</span>
 				</div>
 			</div>
 			<div class="bg-white shadow-lg rounded mb-3 py-3 px-3">

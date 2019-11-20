@@ -11,13 +11,9 @@
 				<?php echo carbon_get_theme_option( 'crb_ad_top_horizont_banner' ); ?>
 			</div>
 			<div class="bg-white shadow-lg rounded">
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<div class="content py-3 px-3">
-					<?php the_content(); ?>	
+					<?php echo apply_filters( 'the_content', carbon_get_theme_option( 'crb_main_content' ) ); ?>
 				</div>
-				<?php endwhile; else: ?>
-					<p><?php _e('Ничего не найдено'); ?></p>
-				<?php endif; ?>
 				<div class="all_games flex flex-wrap mb-3 px-1 md:px-2">
 					<?php 
 						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

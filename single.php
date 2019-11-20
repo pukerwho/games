@@ -64,8 +64,8 @@
 				</div>
 				<div style="margin-top: -30px;">
 					<?php 
-						$rating_old = carbon_get_term_meta(get_queried_object_id(), 'crb_cats_rating'); 
-						$rating_count = carbon_get_term_meta(get_queried_object_id(), 'crb_cats_rating_count'); 
+						$rating_old = carbon_get_post_meta(get_the_ID(), 'crb_post_rating'); 
+						$rating_count = carbon_get_post_meta(get_the_ID(), 'crb_post_rating_count'); 
 						$rating = $rating_old/$rating_count;
 					?>
 					<input type="hidden" value="<?php echo $rating ?>" class="get_rating">
@@ -75,18 +75,22 @@
 	        </div>	
 				</div>
 				<div class="text-sm text-gray-800 mb-3">
-					<span class="mr-2">Рейтинг: <?php echo $rating; ?>;</span>
+					<span class="mr-2">Рейтинг: <?php echo number_format($rating, 1); ?>;</span>
 					<span>Голосов: <?php echo $rating_count; ?>;</span>
 				</div>
 				<div class="flex items-center justify-center mb-3">
-					<div class="flex items-center bg-yellow-300 uppercase rounded py-1 px-3 mr-2">
-						<img src="<?php bloginfo('template_url') ?>/img/left-arrow.svg" alt="" width="25px">
-						<?php echo get_previous_post_link('%link', 'Предыдущая игра'); ?>
-					</div>
-					<div class="flex items-center bg-yellow-300 uppercase rounded py-1 px-3 ml-2">
-						<?php echo get_next_post_link('%link', 'Следующая игра'); ?>
-						<img src="<?php bloginfo('template_url') ?>/img/right-arrow.svg" alt="" width="25px">
-					</div>
+					<?php if(get_previous_post_link()): ?>
+						<div class="flex items-center bg-yellow-300 uppercase rounded py-1 px-3 mr-2">
+							<img src="<?php bloginfo('template_url') ?>/img/left-arrow.svg" alt="" width="25px">
+							<?php echo get_previous_post_link('%link', 'Предыдущая игра'); ?>
+						</div>
+					<?php endif; ?>
+					<?php if(get_next_post_link()): ?>
+						<div class="flex items-center bg-yellow-300 uppercase rounded py-1 px-3 ml-2">
+							<?php echo get_next_post_link('%link', 'Следующая игра'); ?>
+							<img src="<?php bloginfo('template_url') ?>/img/right-arrow.svg" alt="" width="25px">
+						</div>
+					<?php endif; ?>
 				</div>
 				<div class="flex items-center justify-center mb-3">
 					<div class="notworking_button flex items-center bg-red-300 uppercase rounded cursor-pointer py-1 px-3 ml-2">
@@ -94,6 +98,11 @@
 						Игра не работает?
 					</div>
 				</div>
+				<?php if (function_exists('DISPLAY_ULTIMATE_PLUS')): ?>
+					<div>
+						<?php echo DISPLAY_ULTIMATE_PLUS(); ?> 
+					</div>
+				<?php endif; ?>
 				<div>
 					<?php if (carbon_get_theme_option( 'crb_comments_inner' )): ?>
 				    <?php echo carbon_get_theme_option( 'crb_comments_inner' ); ?>

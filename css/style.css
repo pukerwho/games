@@ -42618,6 +42618,13 @@ h3 {
       color: #f56565; }
       .stars i:hover ~ i {
         color: transparent !important; }
+  .stars:hover i {
+    color: #f56565; }
+
+.rating-text {
+  display: none; }
+  .rating-text.active {
+    display: block; }
 
 #playframe {
   margin: 0 auto; }

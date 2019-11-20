@@ -44,17 +44,6 @@ var getRating = $('.get_rating').val();
 var ratingPercentage = getRating*20;
 $('.stars-inner').css({'width':ratingPercentage+'%'});
 
-$('.stars i').on('mouseover', function(){
-  $('.stars i').css({'color':'#f56565'});
-});
-
-$('.stars i').on('mouseleave', function(){
-  $('.stars i').css({'color':'transparent'});
-})
-
-$('.stars i').on('click', function(){
-  $('.stars i').css({'color':'#f56565 !important'});
-});
 
 //Не работает игра
 $('.notworking_button').on('click', function(){
