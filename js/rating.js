@@ -16,6 +16,8 @@ jQuery(function($){
       var postRatingOld = $('.post_rating_old').val();
       var postRatingCount = $('.post_rating_count').val();
       var postRatingNew = $(this).data('value');
+
+      console.log('postRatingNew',postRatingNew);
       var button = $(this),
         data = {
           'action': 'rating_post_back',
