@@ -20,15 +20,6 @@ function crb_attach_theme_options() {
     ->add_tab( 'Комментарии VK', array(
         Field::make( 'textarea', 'crb_comments_head', 'Код в head' ),
         Field::make( 'textarea', 'crb_comments_inner', 'Код для отображения' ),
-    ) )
-    ->add_tab( __('Контакты'), array(
-        Field::make( 'complex', 'crb_contacts', __( 'Контактная информация' ) )
-            ->set_layout( 'tabbed-horizontal')
-            ->add_fields( array(
-                Field::make( 'text', 'crb_contacts_office', __('Офис') ),
-                Field::make( 'text', 'crb_contacts_phone', __('Номер телефона') ),
-                Field::make( 'text', 'crb_contacts_name', __('Имя') ),
-        ) ),
     ) );
 }
 

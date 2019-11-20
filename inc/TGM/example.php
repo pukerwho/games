@@ -81,16 +81,6 @@ function estate_register_required_plugins() {
 		),
 
 		array(
-			'name'               => 'Ultimate social media plus', // The plugin name.
-			'slug'               => 'ultimate-social-media-plus', // The plugin slug (typically the folder name).
-			'source'             => get_template_directory() . '/lib/plugins/ultimate-social-media-plus.zip', // The plugin source.
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
-			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
-			
-		),
-
-		array(
 			'name'               => 'Simple page ordering', // The plugin name.
 			'slug'               => 'simple-page-ordering', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory() . '/lib/plugins/simple-page-ordering.zip', // The plugin source.
