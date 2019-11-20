@@ -78,6 +78,11 @@
 					<span class="mr-2">Рейтинг: <?php echo number_format($rating, 1); ?>;</span>
 					<span>Голосов: <?php echo $rating_count; ?>;</span>
 				</div>
+				<?php if (function_exists('DISPLAY_ULTIMATE_PLUS')): ?>
+					<div class="relative mb-3">
+						<?php echo DISPLAY_ULTIMATE_PLUS(); ?> 
+					</div>
+				<?php endif; ?>
 				<div class="flex items-center justify-center mb-3">
 					<?php if(get_previous_post_link()): ?>
 						<div class="flex items-center bg-yellow-300 uppercase rounded py-1 px-3 mr-2">
@@ -92,11 +97,6 @@
 						</div>
 					<?php endif; ?>
 				</div>
-				<?php if (function_exists('DISPLAY_ULTIMATE_PLUS')): ?>
-					<div class="relative mb-3">
-						<?php echo DISPLAY_ULTIMATE_PLUS(); ?> 
-					</div>
-				<?php endif; ?>
 				<div class="flex items-center justify-center mb-3">
 					<div class="notworking_button flex items-center bg-red-300 uppercase rounded cursor-pointer py-1 px-3 ml-2">
 						<img src="<?php bloginfo('template_url') ?>/img/warning.svg" alt="" width="25px" class="mr-2">
