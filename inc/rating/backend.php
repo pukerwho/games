@@ -16,10 +16,10 @@ function myRating() {
 function rating_category(){
 	global $wpdb;
   
-  $category_id = $_POST['catId'];
-  $category_rating_new = $_POST['categoryRatingNew'];
-  $category_rating_old = $_POST['categoryRatingOld'];
-  $category_rating_count = $_POST['categoryRatingCount'];
+  $category_id = stripslashes_deep($_POST['catId']);
+  $category_rating_new = stripslashes_deep($_POST['categoryRatingNew']);
+  $category_rating_old = stripslashes_deep($_POST['categoryRatingOld']);
+  $category_rating_count = stripslashes_deep($_POST['categoryRatingCount']);
 
   $category_rating_count = $category_rating_count + 1;
   $category_rating_old = $category_rating_old + $category_rating_new;
@@ -33,6 +33,11 @@ function rating_category(){
 			'term_id' => $category_id,
 			'meta_key' => '_crb_cats_rating',
 		),
+		array( '%s' ),
+		array( // формат для &laquo;где&raquo;
+			'%d',
+			'%s'
+		)
 	);
 
 	$wpdb->update(
@@ -44,6 +49,11 @@ function rating_category(){
 			'term_id' => $category_id,
 			'meta_key' => '_crb_cats_rating_count',
 		),
+		array( '%s' ),
+		array( // формат для &laquo;где&raquo;
+			'%d',
+			'%s'
+		)
 	);
 }
 
