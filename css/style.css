@@ -42569,6 +42569,11 @@ h3 {
     .footer .menu li {
       margin-right: 0; } }
 
+/* SHARE BUTTON */
+.sfsiplus_norm_row {
+  width: 100% !important;
+  text-align: center !important; }
+
 .stars-outer {
   display: inline-block;
   position: relative;

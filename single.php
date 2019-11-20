@@ -92,17 +92,18 @@
 						</div>
 					<?php endif; ?>
 				</div>
+				<?php if (function_exists('DISPLAY_ULTIMATE_PLUS')): ?>
+					<div class="text-center mb-3">
+						ddd
+						<?php echo DISPLAY_ULTIMATE_PLUS(); ?> 
+					</div>
+				<?php endif; ?>
 				<div class="flex items-center justify-center mb-3">
 					<div class="notworking_button flex items-center bg-red-300 uppercase rounded cursor-pointer py-1 px-3 ml-2">
 						<img src="<?php bloginfo('template_url') ?>/img/warning.svg" alt="" width="25px" class="mr-2">
 						Игра не работает?
 					</div>
 				</div>
-				<?php if (function_exists('DISPLAY_ULTIMATE_PLUS')): ?>
-					<div>
-						<?php echo DISPLAY_ULTIMATE_PLUS(); ?> 
-					</div>
-				<?php endif; ?>
 				<div>
 					<?php if (carbon_get_theme_option( 'crb_comments_inner' )): ?>
 				    <?php echo carbon_get_theme_option( 'crb_comments_inner' ); ?>
